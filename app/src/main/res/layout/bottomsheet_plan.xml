@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/margin_16">
+
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="@dimen/size_32"
+            android:layout_height="@dimen/size_32"
+            android:background="@drawable/bg_button_round"
+            android:src="@drawable/ic_arrow_left_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/btnEdit"
+            android:layout_width="@dimen/size_32"
+            android:layout_height="@dimen/size_32"
+            android:padding="6dp"
+            android:background="@drawable/bg_button_round"
+            android:src="@drawable/ic_edit"
+            android:layout_marginEnd="@dimen/margin_16"
+            app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="@dimen/size_32"
+            android:layout_height="@dimen/size_32"
+            android:padding="@dimen/margin_4"
+            android:background="@drawable/bg_button_round"
+            android:src="@drawable/ic_baseline_delete_outline_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutTop"
+        android:orientation="vertical"
+        android:background="@drawable/bg_bottomsheet">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="@dimen/size_50"
+            android:layout_height="@dimen/size_5"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="@drawable/bg_view"
+            android:layout_gravity="center_horizontal"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_24"
+            android:padding="@dimen/padding_16">
+
+            <ImageView
+                android:id="@+id/imgTitle"
+                android:layout_width="@dimen/size_32"
+                android:layout_height="@dimen/size_32"
+                android:background="@drawable/bg_image_round"
+                android:padding="@dimen/padding_4"
+                android:src="@drawable/ic_outline_check_circle_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/primary" />
+
+            <TextView
+                android:id="@+id/tvLabelTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/font_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgTitle"
+                app:layout_constraintTop_toTopOf="@+id/imgTitle"
+                android:text="@string/title_label" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:fontFamily="@font/light"
+                android:textSize="@dimen/font_16"
+                android:layout_marginTop="@dimen/margin_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelTitle"
+                tools:text="Title"
+                style="@style/textLight"/>
+
+            <View
+                android:id="@+id/lineTitle"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@color/grey_natural_cool"
+                app:layout_constraintStart_toStartOf="@+id/tvTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+            <ImageView
+                android:id="@+id/imgLocation"
+                android:layout_width="@dimen/size_32"
+                android:layout_height="@dimen/size_32"
+                android:background="@drawable/bg_image_round"
+                android:padding="@dimen/padding_4"
+                android:layout_marginTop="@dimen/margin_16"
+                android:src="@drawable/ic_outline_add_location_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lineTitle"
+                app:tint="@color/primary" />
+
+            <TextView
+                android:id="@+id/tvLabelLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/font_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgLocation"
+                app:layout_constraintTop_toTopOf="@+id/imgLocation"
+                android:text="@string/title_label_location" />
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:fontFamily="@font/light"
+                android:textSize="@dimen/font_16"
+                android:layout_marginTop="@dimen/margin_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgLocation"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelLocation"
+                tools:text="Location"
+                style="@style/textLight"/>
+
+            <View
+                android:id="@+id/lineLocation"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@color/grey_natural_cool"
+                app:layout_constraintStart_toStartOf="@+id/tvLocation"
+                app:layout_constraintTop_toBottomOf="@+id/tvLocation" />
+
+            <ImageView
+                android:id="@+id/imgDate"
+                android:layout_width="@dimen/size_32"
+                android:layout_height="@dimen/size_32"
+                android:background="@drawable/bg_image_round"
+                android:padding="@dimen/padding_4"
+                android:layout_marginTop="@dimen/margin_16"
+                android:src="@drawable/ic_outline_date_range_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lineLocation"
+                app:tint="@color/primary" />
+
+            <TextView
+                android:id="@+id/tvLabelDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/font_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgDate"
+                app:layout_constraintTop_toTopOf="@+id/imgDate"
+                android:text="@string/title_label_date" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:fontFamily="@font/light"
+                android:textSize="@dimen/font_16"
+                android:layout_marginTop="@dimen/margin_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgDate"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelDate"
+                tools:text="Date"
+                style="@style/textLight"/>
+
+            <View
+                android:id="@+id/lineDate"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@color/grey_natural_cool"
+                app:layout_constraintStart_toStartOf="@+id/tvDate"
+                app:layout_constraintTop_toBottomOf="@+id/tvDate" />
+
+            <ImageView
+                android:id="@+id/imgTime"
+                android:layout_width="@dimen/size_32"
+                android:layout_height="@dimen/size_32"
+                android:background="@drawable/bg_image_round"
+                android:padding="@dimen/padding_4"
+                android:layout_marginTop="@dimen/margin_16"
+                android:src="@drawable/ic_baseline_timer_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lineDate"
+                app:tint="@color/primary" />
+
+            <TextView
+                android:id="@+id/tvLabelTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/font_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgTime"
+                app:layout_constraintTop_toTopOf="@+id/imgTime"
+                android:text="@string/title_label_time" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:fontFamily="@font/light"
+                android:textSize="@dimen/font_16"
+                android:layout_marginTop="@dimen/margin_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgTime"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelTime"
+                tools:text="Time"
+                style="@style/textLight"/>
+
+            <View
+                android:id="@+id/lineTime"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@color/grey_natural_cool"
+                app:layout_constraintStart_toStartOf="@+id/tvTime"
+                app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+
+            <ImageView
+                android:id="@+id/imgNotes"
+                android:layout_width="@dimen/size_32"
+                android:layout_height="@dimen/size_32"
+                android:background="@drawable/bg_image_round"
+                android:padding="@dimen/padding_4"
+                android:layout_marginTop="@dimen/margin_16"
+                android:src="@drawable/ic_outline_note_alt_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lineTime"
+                app:tint="@color/primary" />
+
+            <TextView
+                android:id="@+id/tvLabelNotes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/font_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgNotes"
+                app:layout_constraintTop_toTopOf="@+id/imgNotes"
+                android:text="@string/title_label_notes" />
+
+            <TextView
+                android:id="@+id/tvNotes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:fontFamily="@font/light"
+                android:textSize="@dimen/font_16"
+                android:layout_marginTop="@dimen/margin_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgNotes"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelNotes"
+                tools:text="Notes"
+                style="@style/textLight"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

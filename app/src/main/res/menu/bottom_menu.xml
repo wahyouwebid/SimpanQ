@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cnb_unselectedColor="#666666">
+    <item
+        android:id="@+id/menu_link"
+        android:enabled="true"
+        android:title="@string/title_link"
+        android:icon="@drawable/ic_baseline_insert_link_24"
+        app:cnb_iconColor="@color/primary"/>
+    <item
+        android:id="@+id/menu_planing"
+        android:enabled="true"
+        android:title="@string/title_planing"
+        android:icon="@drawable/ic_baseline_access_time_24"
+        app:cnb_iconColor="@color/primary"/>
+    <item
+        android:id="@+id/menu_notes"
+        android:enabled="true"
+        android:title="@string/title_notes"
+        android:icon="@drawable/ic_outline_library_books_24"
+        app:cnb_iconColor="@color/primary"/>
+    <item
+        android:id="@+id/menu_task"
+        android:enabled="true"
+        android:title="@string/title_task"
+        android:icon="@drawable/ic_outline_library_add_check_24"
+        app:cnb_iconColor="@color/primary"/>
+    <item
+        android:id="@+id/menu_setting"
+        android:enabled="true"
+        android:title="@string/title_setting"
+        android:icon="@drawable/ic_outline_settings_24"
+        app:cnb_iconColor="@color/primary"/>
+</menu>
